@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Пример веб-страницы</title>
+  </head>
+  <body>
+    <ul>
+        <li><a href="http://kubsu.ru">1. Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>    
+ 	<li><a href="https://kubsu.ru">2. Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https</a></li>    
+	<li><a href="https://kubsu.ru/"><img src="kubsu.jpg" width="200" height="200" alt="Ссылка-изображение"></a></li>      
+	<li><a href="#fragment">6. Ссылка на фрагмент текущей страницы</a></li>  
+        <li><a href=index.html#target>Ссылка на фрагмент стороннего сайта</a>
+	<li><a href="">16. Ссылка с пустым href</a></li> 
+	<li><a>17. Ссылка без href</a></li> 
+	<li><a href="http://kubsu.ru" rel="nofollow">18. Ссылка, по которой запрещен переход поисковикам</a></li> 
+	<li><a href="http://kubsu.ru" rel="noindex">19. Ссылка, запрещенная для индексации</a></li>
+        <li>
+            <ol>
+       	        <li><a href="http://kubsu.ru" title="Главная страница КубГУ">КубГУ</a></li>
+                <li><a href="https://kubsu.ru" title="Главная страница КубГУ (https)">КубГУ (https)</a></li>
+            </ol>
+        <a href="ftp://user:password@ftp.example.com/file.txt">Ссылка на файл на сервере FTP с авторизацией</a>
+
+    <form>
+     <label>
+        ФИО:<br>
+        <input type="text" name="full_name" id="fullname" placeholder="Введите ваше ФИО">
+     </label> 
+     <br> 
+     <br>
+
+     <label>
+         Телефон:<br>
+         <input type="tel" name="phone_number" id="phone_number" placeholder="Введите ваш номер">
+     </label> <br> <br>
+
+     <label>
+         E-mail:<br>
+         <input type="email" name="email" id="email" placeholder="Введите вашу почту">
+     </label> <br> <br>
+
+     <label>
+        Дата рождения:<br>
+        <input type="date" name="field-date">
+     </label><br> <br>
+
+     Пол:<br>
+      <label><input type="radio" checked="checked"
+        name="gender" value="male">
+        Мужской</label> 
+      <label><input type="radio"
+        name="gender" value="female">
+        Женский</label><br> <br>
+
+    <label> Любимый язык программирования: <br>
+    <select name="opt" id="topic">
+        <option value="1">Pascal</option>
+        <option value="1">C</option>
+        <option value="1">C++</option>
+        <option value="1">JavaScript</option>
+        <option value="1">PHP</option>
+        <option value="1">Python</option>
+        <option value="1">Java</option>
+        <option value="1">Haskel</option>
+        <option value="1">Clojure</option>
+        <option value="1">Prolog</option>
+        <option value="1">Scala</option>
+        </select>
+    </label> <br> <br>
+
+    <label>
+        Биография:<br>
+        <textarea name="biography" placeholder='Напишите вашу биографию'></textarea>
+      </label><br> <br>
+
+       С контрактом ознакомлен <label><input type="checkbox" name="check-1"></label><br> <br>
+
+ <div id="target">  
+<button>Сохранить</button>
+</div>
+</form>
+  </body>
+</html>
