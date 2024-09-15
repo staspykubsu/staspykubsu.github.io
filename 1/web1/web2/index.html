@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Осень</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="site-header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Логотип">
+            </div>
+            <div class="site-title">Осень</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Сентябрь</a></li>
+                    <li><a href="#">Октябрь</a></li>
+                    <li><a href="#">Ноябрь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="links">
+            <h1>Список гиперссылок</h1>
+            <ul>
+                <li>1. <a href="http://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>    
+                <li>2. <a href="https://kubsu.ru">Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https</a></li>    
+                <li>3. <a href="https://kubsu.ru/"><img src="fall.jpg" width="250" height="300" alt="Ссылка-изображение"></a></li>      
+                <li>4. <a href="index9.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li>5. <a href="index.html">Сокращенная ссылка на главную страницу</a></li>
+                <li>6. <a href="#fragment">Ссылка на фрагмент текущей страницы</a></li> 
+                <li>7. <a href="index9.html?query=example&category=books&page=2">Ссылка с тремя параметрами в URL</a></li>
+                <li>8. <a href="index9.html?id=123">Ссылка с параметром id в URL</a></li> 
+                <li>9. <a href="index9.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+                <li>10. <a href="about/index10.html">Относительная ссылка на страницу в каталоге about</a></li>
+                <li>11. <a href="../index11.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+                <li>12. <a href="../../index12.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+                <li><p>13. <a href="https://kubsu.ru">КубГУ</a> – высшее учебное заведение в Краснодаре. Является одним из крупнейших и старейших университетов юга России.
+                </p>
+                </li>
+                <li>14. <a href="index9.html#target">Ссылка на фрагмент стороннего сайта</a></li>
+                <li>15. <img src="fall.jpg" height="300" width="250" alt="Image" usemap="#image-map">
+                <map name="image-map">
+                <area shape="rect" coords="10,10,100,100" href="https://kubsu.ru" alt="Rectangle Area">
+                <area shape="circle" coords="150,150,50" href="https://kubsu.ru" alt="Circle Area">
+                </map></li>
+                <li>16. <a href="">Ссылка с пустым href</a></li> 
+                <li>17. <a>Ссылка без href</a></li> 
+                <li>18. <a href="http://kubsu.ru" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li> 
+                <li>19. <a href="http://kubsu.ru" rel="noindex">Ссылка, запрещенная для индексации</a></li>
+                <li>20. <ol>
+                           <li><a href="http://kubsu.ru" title="Главная страница КубГУ">КубГУ</a></li>
+                        <li><a href="https://kubsu.ru" title="Главная страница КубГУ (https)">КубГУ (https)</a></li>
+                    </ol>
+                <li>21. <a href="ftp://user:password@ftp.example.com/file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
+            </ul>
+        </section>
+
+        <section class="table">
+            <h1>Таблица</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Заголовок 1</th>
+                        <th>Заголовок 2</th>
+                        <th>Заголовок 3</th>
+                        <th>Заголовок 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Данные 1</td>
+                        <td>Данные 2</td>
+                        <td>Данные 3</td>
+                        <td>Данные 4</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Данные 1</td>
+                        <td>Данные 2</td>
+                        <td>Данные 3</td>
+                        <td>Данные 4</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Данные 1</td>
+                        <td>Данные 2</td>
+                        <td>Данные 3</td>
+                        <td>Данные 4</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Данные 1</td>
+                        <td>Данные 2</td>
+                        <td>Данные 3</td>
+                        <td>Данные 4</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Данные 1</td>
+                        <td>Данные 2</td>
+                        <td>Данные 3</td>
+                        <td>Данные 4</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Данные 1</td>
+                        <td>Данные 2</td>
+                        <td>Данные 3</td>
+                        <td>Данные 4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="form">
+            <h1>Форма</h1>
+            <form>
+                <label>
+                    ФИО:<br>
+                    <input type="text" name="full_name" id="fullname" placeholder="Введите ваше ФИО">
+                 </label>
+
+            
+                 <label>
+                     Телефон:<br>
+                     <input type="tel" name="phone_number" id="phone_number" placeholder="Введите ваш номер">
+                 </label>
+            
+                 <label>
+                     E-mail:<br>
+                     <input type="email" name="email" id="email" placeholder="Введите вашу почту">
+                 </label>
+            
+                 <label>
+                    Дата рождения:<br>
+                    <input type="date" name="field-date">
+                 </label>
+            
+                 Пол:<br>
+                  <label><input type="radio" name="gender" value="male">
+                    Мужской</label> 
+                  <label><input type="radio"
+                    name="gender" value="female">
+                    Женский</label>
+            
+                <label> Любимый язык программирования: <br>
+                <select name="opt" id="topic">
+                    <option value="1">Pascal</option>
+                    <option value="1">C</option>
+                    <option value="1">C++</option>
+                    <option value="1">JavaScript</option>
+                    <option value="1">PHP</option>
+                    <option value="1">Python</option>
+                    <option value="1">Java</option>
+                    <option value="1">Haskel</option>
+                    <option value="1">Clojure</option>
+                    <option value="1">Prolog</option>
+                    <option value="1">Scala</option>
+                    </select>
+                </label>
+            
+                <label id="fragment">
+                    Биография:<br>
+                    <textarea name="biography" placeholder='Напишите вашу биографию'></textarea>
+                  </label>
+            
+                   С контрактом ознакомлен: <label><input type="checkbox" name="check-1"></label>
+            
+                <input type="submit" value="Сохранить" id="save">
+            </form>
+        </section>
+
+    </main>
+
+    <footer id="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Осень. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
