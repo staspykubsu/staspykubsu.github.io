@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.image-gallery {
+    width: 100%;
+    position: relative; /* Для правильного позиционирования стрелок */
+}
+
+.slick-track {
+    height: 100vh;
+}
+
+.gallery-slide {
+    border: 4px #fff solid;
+    border-radius: 10px;
+    width: 600px; /* Увеличено для большей ширины */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-slide img {
+    width: 100%; /* Оставлено 100% для адаптивности */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 10px;
+}
+
+.slider-arrows {
+    width: 50px; /* Увеличена ширина стрелок */
+    height: 50px; /* Увеличена высота стрелок */
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-arrows__prev {
+    position: absolute;
+    left: 20px; /* Позиция стрелки влево */
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg); /* Центрирование по вертикали */
+}
+
+.slider-arrows__next {
+    position: absolute;
+    right: 20px; /* Позиция стрелки вправо */
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg); /* Центрирование по вертикали */
+}
+
+.slick-dots {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px; /* Положение кнопок снизу */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    column-gap: 15px; /* Расстояние между кнопками */
+}
+
+.slick-dots li {
+    list-style-type: none;
+}
+
+.slick-dots .slick-active button {
+    background: #fff;
+    color: #000;
+    transform: scale(1.2); /* Увеличение активной кнопки */
+}
+
+.slick-dots button {
+    width: 40px; /* Ширина кнопок */
+    height: 40px; /* Высота кнопок */
+    border: 2px #fff solid;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    background: #000; /* Фон кнопок */
+    transition: background 0.3s, transform 0.3s; /* Плавный переход */
+}
+
+.slick-dots button:hover {
+    background: #fff; /* Фон при наведении */
+    color: #000; /* Цвет текста при наведении */
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+@media (max-width: 460px) {
+    .slider-arrows__next {
+        left: 30%;
+    }
+
+    .slider-arrows__prev {
+        right: 30%;
+    }
+
+    .gallery-slide {
+        width: 90%; /* Уменьшение ширины для мобильных устройств */
+    }
+}
