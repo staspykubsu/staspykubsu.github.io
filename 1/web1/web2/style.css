@@ -1,97 +1,108 @@
-* {
+
+*{
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    background: url(./images/7.jpg) center center/cover no-repeat;
     color: #fff;
-    font-family: 'Arial', sans-serif; /* Замените на желаемый шрифт */
 }
-
-body {
-    background-color: #d9f7e8; /* Зеленоватый фон */
-    font-family: 'Georgia', serif; /* Пример красивого шрифта */
-}
-
-.slick-track {
+  
+  .slick-track {
     height: 100vh;
-}
-
-.slide {
+  }
+  
+  .slide {
     border: 4px #fff solid;
     border-radius: 10px;
     width: 300px;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 50px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для слайдов */
-}
-
-.slide img {
-    width: 100%; /* Используйте 100%, чтобы изображение занимало всю ширину контейнера */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    max-width: 200px; /* Ограничение максимальной ширины */
-    max-height: 140px; /* Ограничение максимальной высоты */
+    background: url(./images/10.webp) -100px center/cover;
+  }
+  .slide img {
+    width: 160px;
+    height: 100px;
     border-radius: 10px;
-    object-fit: cover; /* Сохранение пропорций изображения */
-}
-
-.slider-arrows {
+  }
+  
+  .slider-arrows {
     width: 40px;
-    background-color: #4CAF50; /* Цвет кнопок */
+    background-color: white;
     border-radius: 50%;
-    color: white; /* Цвет текста на кнопках */
-}
-
-.slider-arrows__prev,
-.slider-arrows__next {
+  }
+  
+  .slider-arrows__prev {
     position: absolute;
+    right: 40%;
     top: 20%;
     z-index: 2;
     cursor: pointer;
+    -webkit-transition: all 0.1s ease-in;
     transition: all 0.1s ease-in;
-}
-
-.slider-arrows__prev {
-    right: 40%;
     transform: rotate(90deg);
-}
-
-.slider-arrows__next {
+  }
+  
+  .slider-arrows__next {
+    position: absolute;
+    top: 0;
     left: 40%;
+    top: 20%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 2;
+    cursor: pointer;
     transform: rotate(270deg);
-}
-
-.slick-dots {
+  }
+  
+  .slick-dots {
     position: absolute;
     z-index: 2;
     top: 70%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     width: 100%;
     padding: 0 25px;
     background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    column-gap: 30px;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
     row-gap: 20px;
     flex-wrap: wrap;
-}
-
-.slick-dots li {
+  }
+  .slick-dots li {
     list-style-type: none;
     border-radius: 50%;
-}
+  }
+  
+  .slick-dots .slick-active button {
+    background: #fff;
+    color: #000;
+  }
 
-.slick-dots .slick-active button {
-    background: #4CAF50; /* Цвет активной точки */
-    color: #fff;
-}
-
-.slick-dots button {
+  .slick-dots button {
     width: 50px;
     height: 50px;
     border: 2px #fff solid;
@@ -99,20 +110,20 @@ body {
     font-size: 18px;
     cursor: pointer;
     background: #000;
-    color: #fff; /* Цвет текста на кнопках */
-}
+  }
 
-.slick-dots button:hover {
-    background: #4CAF50; /* Цвет кнопок при наведении */
-    color: #fff;
-}
+  .slick-dots button:hover {
+    background: #fff;
+    color: #000;
+  }
+  
 
-@media (max-width: 460px) {
-    .slider-arrows__next {
-        left: 30%;
+  @media (max-width: 460px) {
+    .slider-arrows__next  {
+      left: 30%;
     }
 
     .slider-arrows__prev {
-        right: 30%;
+      right: 30%;
     }
-}
+  }
