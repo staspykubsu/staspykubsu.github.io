@@ -25,19 +25,18 @@ body {
     justify-content: center;
     align-items: center;
     padding: 50px 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     position: relative;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для слайдов */
 }
 
 .slide img {
-    width: 200px; /* Увеличенный размер */
-    height: 140px; /* Увеличенный размер */
+    width: 100%; /* Используйте 100%, чтобы изображение занимало всю ширину контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    max-width: 200px; /* Ограничение максимальной ширины */
+    max-height: 140px; /* Ограничение максимальной высоты */
     border-radius: 10px;
+    object-fit: cover; /* Сохранение пропорций изображения */
 }
 
 .slider-arrows {
