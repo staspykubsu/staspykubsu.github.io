@@ -4,7 +4,7 @@
     margin: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: url(./images/7.jpg) center center/cover no-repeat;
+    background-color: white;
     color: #fff;
 }
   
@@ -34,7 +34,6 @@
             transform: translate(-50%, -50%);
     position: relative;
     z-index: 1;
-    background: url(./images/10.webp) -100px center/cover;
   }
   .slide img {
     width: 160px;
