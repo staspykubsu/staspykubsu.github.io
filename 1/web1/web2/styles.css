@@ -1,0 +1,761 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header, main, footer {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+/* Шапка */
+
+.header {
+  position: relative;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+.header-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin-left: 1rem;
+  position: relative;
+}
+
+.menu a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  padding: 1rem;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.header-content {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.header-content p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.btn {
+  background: #f04e23;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Секции */
+.stats, .services, .pricing, .team, .faq, .contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.stats-grid, .services-grid, .pricing-grid, .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat span, .pricing-plan h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.service-item, .pricing-plan {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, button {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background: #f04e23;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Секция отзывов */
+.reviews {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #ffffff; /* Белый фон для всего блока */
+}
+
+.reviews h2 {
+  font-size: 2.5rem; /* Увеличиваем размер шрифта заголовка */
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Слайдер */
+.reviews-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff; /* Белый фон для слайдера */
+  border-radius: 12px; /* Скругленные углы */
+  overflow: visible; /* Чтобы стрелки выходили за пределы контейнера */
+  box-shadow: none; /* Убираем тень справа */
+}
+
+.slider-window {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.review-content {
+  background: #ffffff;
+  padding: 2rem;
+  text-align: left;
+  border-radius: 12px; /* Скругленные углы */
+  box-shadow: none; /* Убираем тень */
+}
+
+.review-content h3 {
+  font-size: 2rem; /* Увеличиваем размер шрифта заголовка в слайде */
+  color: #f04e23;
+  margin-bottom: 1rem;
+}
+
+.review-content p {
+  font-size: 1.2rem; /* Увеличиваем размер шрифта текста отзыва */
+  color: #666;
+  line-height: 1.5;
+}
+
+.review-content a {
+  color: #f04e23;
+  text-decoration: none;
+}
+
+.review-content strong {
+  font-size: 1.1rem; /* Увеличиваем размер шрифта для выделенного текста */
+  color: #333;
+}
+
+/* Кнопки слайдера */
+/* Кнопки слайдера */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f04e23;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;  /* Размер кнопок */
+  height: 50px; /* Размер кнопок */
+  font-size: 2rem; /* Размер стрелок */
+  display: flex; /* Используем flex для центрирования */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  cursor: pointer;
+  z-index: 10; /* Увеличиваем z-index, чтобы стрелки были поверх содержимого */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень для кнопок */
+}
+
+.slider-button:hover {
+  background-color: #d13e1b;
+  /* Убрали transform для отмены увеличения при наведении */
+}
+
+.prev-slide {
+  left: -60px; /* Отступ для левой стрелки */
+}
+
+.next-slide {
+  right: -60px; /* Отступ для правой стрелки */
+}
+
+
+/* Пагинация */
+.reviews-pagination {
+  margin-top: 1rem;
+}
+
+.pagination-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination-dot.active {
+  background: #f04e23;
+}
+
+
+
+/* Основной стиль для FAQ */
+/* Основной стиль для FAQ */
+.faq {
+  padding: 1.5rem 1rem;
+  background-color: #fff; /* Убираем фон */
+  border-radius: 8px;
+  box-shadow: none; /* Убираем тень */
+  margin-top: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+.faq h2 {
+  font-size: 1.6rem; /* Уменьшаем размер заголовка */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.faq-list {
+  list-style: none; /* Убираем стандартные маркеры списка */
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  background-color: transparent; /* Убираем фон */
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень для hover */
+  background-color: #f9f9f9;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.faq-item h3:hover {
+  color: #f04e23;
+}
+
+.faq-item p {
+  font-size: 0.95rem; /* Уменьшаем размер текста */
+  color: #555;
+  line-height: 1.4;
+  max-height: 0; /* Изначально скрыто */
+  padding: 0 0.5rem;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  margin: 0; /* Убираем лишние отступы */
+}
+
+.faq-item.active p {
+  max-height: 500px; /* Устанавливаем достаточно большую максимальную высоту */
+  padding: 0.5rem;
+}
+
+.faq-item.active h3 {
+  color: #f04e23; /* Изменение цвета при открытии */
+}
+
+/* Team */
+/* Секция "Наша команда" */
+.team {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Контейнер для всех участников команды */
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Индивидуальные участники команды */
+.team-member {
+  width: 200px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Круглые изображения */
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Кнопка "Вся команда" */
+.team-button {
+  display: inline-block;
+  padding: 12px 30px; /* Размеры кнопки */
+  margin-top: 2rem;
+  background-color: black; /* Черный фон */
+  color: white; /* Белый текст */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700; /* Толщина шрифта */
+  border-radius: 30px; /* Округлые углы */
+  border: 2px solid black; /* Черная граница */
+  text-transform: uppercase; /* Верхний регистр */
+  letter-spacing: 1px; /* Расстояние между буквами */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Плавный переход */
+}
+
+.team-button:hover {
+  background-color: white; /* Белый фон при наведении */
+  color: black; /* Черный текст */
+  border-color: black; /* Черная граница */
+}
+
+/* Секция "Тарифы" */
+.pricing {
+  background-color: #ffffff; /* Убираем серый фон и оставляем белый */
+  padding: 5rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Легкая тень для создания эффекта глубины */
+}
+
+.pricing h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-items: center;
+}
+
+.pricing-plan {
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Легкая тень для эффекта объема */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 350px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pricing-plan:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15); /* Увеличиваем тень при наведении */
+}
+
+.pricing-plan h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #f04e23;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricing-plan p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.pricing-plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.pricing-plan ul li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-plan ul li::before {
+  content: '✔';
+  color: #f04e23;
+  margin-right: 10px;
+}
+
+.pricing-plan a.btn {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: #f04e23;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.pricing-plan a.btn:hover {
+  background-color: #d13e1b;
+  transform: scale(1.05);
+}
+
+.custom-plan {
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.custom-link {
+  color: #f04e23;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.custom-link:hover {
+  color: #d13e1b;
+  text-decoration: underline;
+}
+
+.cases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки для фото */
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+  max-width: 1200px; /* Ограничиваем максимальную ширину */
+  margin-left: auto; /* Выравниваем по центру */
+  margin-right: auto; /* Выравниваем по центру */
+}
+
+.cases h2 {
+  grid-column: span 3;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.case-item {
+  display: block; /* Делает блок кликабельным */
+  text-decoration: none; /* Убирает подчеркивание у ссылки */
+  cursor: pointer;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавим тень для эффекта */
+  height: 350px; /* Ограничиваем высоту */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-item:hover {
+  transform: translateY(-10px); /* Эффект при наведении */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Усиленная тень при наведении */
+}
+
+.case-image {
+  width: 100%;
+  height: 200px;
+  background-color: #e0e0e0;
+}
+
+.case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Чтобы изображение заполнило блок и сохранило пропорции */
+}
+
+.case-description {
+  padding: 15px;
+  width: 100%;
+}
+
+.case-description h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.case-description p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.case-description span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+header{
+  min-height: 750px;
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color:white;
+  background-image: url("../img/druplicon.svg");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-color: rgba(0, 0, 0, 0.897);
+}
+
+header p{
+  color:rgba(204, 204, 204);
+}
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+header{
+  background-image: url("../img/druplicon.svg");
+  background-repeat: no-repeat;
+  background-size: inherit;
+}
+
+header{
+  min-height:650px;
+}
+.header-center{
+  display:flex;
+  max-width:1220px;
+  margin:auto;
+  margin-top:8.3%;
+}
+
+/* Наведение на ссылки меню */
+.nav .menu a {
+  transition: color 0.3s ease; /* Плавный переход */
+}
+
+.nav .menu a:hover {
+  color: #f04e23; /* Цвет при наведении */
+}
+
+/* Увеличение кнопки "Связаться" при наведении */
+.btn {
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход */
+}
+
+.btn:hover {
+  transform: scale(1.1); /* Увеличение */
+  background-color: #f04e23; /* Изменение цвета фона */
+  color: #fff; /* Цвет текста */
+}
+
+/* Изменение курсора и анимации логотипа img/drupal-coder.svg */
+/* Изменение курсора и более спокойная анимация логотипа img/drupal-coder.svg */
+#logo {
+  cursor: pointer; /* Курсор-ссылка */
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease; /* Плавный переход */
+}
+
+#logo:hover {
+  transform: scale(1.1); /* Легкое увеличение */
+  opacity: 0.9; /* Легкое затухание */
+}
+
+
+/* Стиль выпадающего меню */
+.nav .dropdown-menu {
+  display: none; /* Скрыто по умолчанию */
+  position: absolute;
+  background: #1e1e1e; /* Красивый темный фон */
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Тень для объема */
+  z-index: 100; /* Выше остальных элементов */
+}
+
+.nav .dropdown:hover .dropdown-menu {
+  display: block; /* Показ при наведении */
+}
+
+/* Анимация при появлении выпадающего меню */
+.nav .dropdown-menu li {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.nav .dropdown:hover .dropdown-menu li {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
