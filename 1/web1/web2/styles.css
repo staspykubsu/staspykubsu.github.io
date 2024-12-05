@@ -737,16 +737,6 @@ header{
   opacity: 1;
 }
 
-/* Для видео */
-.header-video {
-  filter: brightness(70%); /* Затемнение */
-  transition: filter 0.3s ease;
-}
-
-.header-video:hover {
-  filter: brightness(100%); /* Увеличение яркости при наведении */
-}
-
 
 /* Мобильная версия */
 @media (max-width: 768px) {
